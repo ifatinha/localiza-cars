@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body,
+main,
+header,
+h1,
+nav,
+div,
+a,
+input,
+h2,
+p {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black            : #050404;
+    --independence-blue: #38405F;
+    --independence     : #59546C;
+    --roman-silver     : #FEFEFF;
+    --imperial-red     : #FF0035;
+}
+
+html {
+    scroll-behavior: smooth;
+    height         : 100%;
+}
+
+body {
+    font-family     : 'Roboto', sans-serif;
+    background-color: var(--black);
+    height          : 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+main {
+    flex-direction : column;
+    background     : linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/background1.jpg");
+    background-size: cover;
+    height         : 100vh;
+}
+
+.header {
+    justify-content: space-around;
+    align-items    : center;
+    padding        : 1%;
+}
+
+.logo h1 {
+    color         : var(--roman-silver);
+    font-size     : 1.9em;
+    letter-spacing: 0.1em;
+}
+
+.logo h1 span {
+    background-color: var(--imperial-red);
+    color           : var(--black);
+    text-transform  : uppercase;
+    padding         : 2px;
+}
+
+.header .menu {
+    width      : 40%;
+    gap        : 18%;
+    align-items: center;
+}
+
+.menu a:hover {
+    color: var(--imperial-red);
+}
+
+a {
+    text-decoration: none;
+    color          : var(--roman-silver);
+    font-size      : 1.1em;
+}
+
+.header .login {
+    width      : 20%;
+    gap        : 5%;
+    align-items: center;
+}
+
+.login a {
+    border    : 1px solid var(--roman-silver);
+    width     : 50%;
+    text-align: center;
+    padding   : 2%;
+}
+
+.login a:hover {
+    background-color: var(--imperial-red);
+    transition      : 1ms;
+    color           : var(--black);
+    border          : none;
+}
+
+.container {
+    margin    : 12% auto;
+    color     : var(--roman-silver);
+    text-align: center;
+    width     : 40%;
+}
+
+.container p:first-child {
+    font-size     : 1.4em;
+    border-bottom : 1px solid var(--independence);
+    text-transform: uppercase;
+    margin-bottom : 2%;
+    padding-bottom: 1%;
+}
+
+.container p {
+    letter-spacing: 0.2em;
+}
+
+.container p:first-child span {
+    color: var(--imperial-red);
+}
+
+section {
+    color         : var(--roman-silver);
+    flex-direction: column;
+    margin-bottom : 5%;
+}
+
+section h2 {
+    color         : var(--imperial-red);
+    font-size     : xx-large;
+    letter-spacing: 0.1em;
+    padding-bottom: 1%;
+    text-transform: uppercase;
+}
+
+/*Section Sobre*/
+
+.section-about {
+    flex-flow      : row wrap;
+    justify-content: space-between;
+    min-height     : 100vh;
+}
+
+.content-about-text {
+    width  : 30%;
+    padding: 1%;
+}
+
+.content-about-text p {
+    margin-bottom: 3%;
+    line-height  : 1.5em;
+}
+
+.content-about-text .btn-about {
+    margin-top: 13%;
+}
+
+.content-about-text .btn-section-about {
+    margin-top      : 15%;
+    text-align      : center;
+    padding         : 2% 10%;
+    border-radius   : 5px;
+    outline         : none;
+    background-color: var(--imperial-red);
+}
+
+.content-about-img {
+    width: 70%;
+}
+
+.content-about-img img {
+    width: 100%;
+}
+
+.section-about .content-about-info {
+    justify-content: space-around;
+    align-items    : center;
+    text-align     : center;
+    width          : 100%;
+    margin-top     : 5%;
+}
+
+.content-about-info .title-info {
+    font-size  : 3em;
+    color      : var(--imperial-red);
+    font-weight: bolder;
+}
+
+/*Section carros*/
+
+.title-section-carros {
+    margin    : 0 0 2% 2%;
+    text-align: center;
+}
+
+.container-carros {
+    flex-flow      : row wrap;
+    justify-content: space-around;
+    align-items    : center;
+    margin-top     : 2%;
+}
+
+.container-carros .card-carro {
+    width         : 30%;
+    flex-direction: column;
+    margin-bottom : 2%;
+}
+
+.card-carro img {
+    width: 100%;
+}
+
+.card-carro .card-desc {
+    flex-flow  : column wrap;
+    margin     : 5% 0;
+    line-height: 1.8em;
+    flex       : 1 1 auto;
+    text-align : center;
+}
+
+.card-desc .card-titulo {
+    text-align: center;
+    font-size : 1.2em;
+}
+
+.card-desc .text-desc {
+    font-size: 0.8em;
+}
+
+.card-carro .btn-card-1,
+.card-carro .btn-card-2 {
+    text-align    : center;
+    padding       : 2%;
+    margin-bottom : 2%;
+    text-transform: uppercase;
+    font-size     : 0.9em;
+}
+
+.card-carro .btn-card-1 {
+    border: 1px solid var(--independence-blue);
+}
+
+.card-carro .btn-card-2 {
+    background-color: var(--imperial-red);
+    color           : var(--black);
+}
+
+.card-carro .btn-card-1:hover {
+    background-color: var(--imperial-red);
+    color           : var(--black);
+    transition      : 0.3s;
+}
+
+.card-carro .btn-card-2:hover {
+    background-color: transparent;
+    border          : 1px solid var(--independence-blue);
+    color           : var(--roman-silver);
+    transition      : 0.3s;
+}
+
+/*Section Contato*/
+
+.section-contato {
+    background     : linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/background.jpg") center;
+    background-size: cover;
+    min-height     : 100vh;
+}
+
+.formulario {
+    width    : 100%;
+    max-width: 80%;
+    margin   : 1% auto;
+}
+
+.formulario fieldset {
+    margin-bottom: 2%;
+}
+
+.formulario input {
+    width           : 100%;
+    margin          : 1% 0;
+    padding         : 1%;
+    background-color: transparent;
+    border          : none;
+    border-bottom   : 1px solid var(--independence-blue);
+    color           : var(--roman-silver);
+}
+
+.formulario input::placeholder {
+    color: var(--roman-silver);
+}
+
+.formulario select {
+    width  : 100%;
+    margin : 1% 0;
+    padding: 1%;
+    border : none;
+}
+
+
+.formulario .btn-cadastro {
+    background-color: #FF0035;
+    padding         : 1% 10%;
+    border          : none;
+    border-radius   : 5px;
+    text-transform  : uppercase;
+    letter-spacing  : 0.1em;
+    margin-top      : 2%;
+}
+
+.formulario .btn-cadastro:hover {
+    border          : 1px solid var(--independence-blue);
+    transition      : 0.3s;
+    background-color: transparent;
+    color           : var(--roman-silver);
+}
+
+/*Footer*/
+footer {
+    color     : var(--roman-silver);
+    text-align: center;
+    padding   : 5%;
+}
+
+@media screen and (max-width:450px) {
+
+    .header .menu,
+    .header .login {
+        display: none;
+    }
+
+    .header .logo {
+        margin-top: 2%;
+    }
+
+    .container {
+        margin-top: 50%;
+        width     : 100%;
+    }
+
+    .container p:first-child {
+        font-size: 1em;
+    }
+
+    .container p:last-child {
+        font-size: 0.9em;
+    }
+
+    .section-about,
+    .container-carros {
+        flex-direction: column;
+        padding       : 3%;
+    }
+
+    .content-about-text,
+    .content-about-img {
+        width: 100%;
+    }
+
+    .content-about-text .btn-about {
+        margin-bottom: 5%;
+        width        : 100%;
+    }
+
+    .content-about-info {
+        flex-direction: column;
+    }
+
+    .container-carros .card-carro {
+        width: 100%;
+    }
+
+    .formulario fieldset {
+        width        : 100%;
+        margin-bottom: 5%;
+        padding      : 2%;
+    }
+
+    .formulario input{
+        margin: 5% 0;
+    }
+}
